@@ -1,0 +1,23 @@
+body { padding-top: 60px; }
+
+#new-question textarea 
+{
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    background-color: #A9BCF5;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    margin-left: auto;
+    margin-right: auto;
+}
+#new-question 
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+.question-like 
+{
+    width: 10px;
+}

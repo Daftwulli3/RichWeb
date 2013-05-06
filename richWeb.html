@@ -1,0 +1,66 @@
+<head>
+  <title>Ask Your Lecturer</title>
+  <H1 align = "center"><i><strong>Ask Your Lecturer?<strong></i></H1>
+</head>
+
+<body>
+  <header class="navbar navbar-fixed-top">
+    <nav class="navbar-inner">
+      <div class="container">
+      </div>
+    </nav>
+  </header>
+  <div id="main" role="main">
+    <div class="container">
+      <div class="content">
+        <div class="row">
+          <div class="span12">
+            {{> compose}}
+            {{> list}}
+          </div>
+        </div>
+        <footer>
+        </footer>
+      </div>
+    </div> <!--! end of .container -->
+  </div> <!--! end of #main -->
+
+</body>
+
+<template name="compose">
+  <form id="new-question" >
+    <textarea class="field span6"
+              id="question-body"
+              rows="4"
+              cols = "50"
+              placeholder="Submit a Question for your lecturer...."
+              required></textarea>
+	
+    <input type="submit" value="Submit Question" class="btn btn-info btn-large btn-block">
+  </form>
+</template>
+
+<template name="list">
+  <table class="table table-striped">
+    <tbody>
+      {{#each questions}}
+        <tr class="success">
+          <td>
+	    <i><strong>Anonomous: </strong></i>
+            <p class="text-success">{{body}}</p>
+          </td>
+	  <td class="question-like">
+	    <input type="icon" class="icon-thumbs-up">
+          </td>
+	  <td>    
+	    
+	    <div>
+	    <span class="Up-Votes">{{upvote}}</span>
+	    </div>
+	  </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
