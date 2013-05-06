@@ -1,3 +1,4 @@
+//Developed using examples from Meteor.js Website and Brian Gillespie Twitter Example
 Questions = new Meteor.Collection("questions");
 
 if (Meteor.isClient) {
