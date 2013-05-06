@@ -1,3 +1,4 @@
+//Developed with the aid of examples from Meteor js site and twitter example from Brian Gillesies Github
 Questions = new Meteor.Collection("questions");
 
 //Questions.remove({});
@@ -17,7 +18,8 @@ if (Meteor.isClient) {
         }
     }
 
-    //diaramuid
+    //diarmuid
+    //handle user questions
     Template.compose.events({
         'submit form': function (event) {
             var $body = $('#question-body');
@@ -51,12 +53,14 @@ if (Meteor.isClient) {
                 Comment: $body,
                 Author: getFacebookName()
             });
+            //
             Questions.update(Session.get("selected_question"), {$set: {commentArray: currentArray}});
             $body.val('');
             window.alert("comment Submited");
         }
     });
 /////////
+//Diarmuid
     Template.list.selected = function () {
         return Session.equals("selected_question", this._id) ? "selected" : '';
     };
@@ -68,7 +72,8 @@ if (Meteor.isClient) {
         }
     });
 ////////
-
+  
+  //increments the questions upvote count upon selection
     Template.list.events({
         'click .icon-thumbs-up': function () {
             Session.set("selected_question", this._id)
