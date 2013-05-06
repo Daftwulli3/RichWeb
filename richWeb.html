@@ -26,7 +26,7 @@
   </div> <!--! end of #main -->
 
 </body>
-
+<!-- Code for the textarea for qs -->
 <template name="compose">
   <form id="new-question" >
     <textarea class="field span6"
@@ -35,11 +35,11 @@
               cols = "50"
               placeholder="Submit a Question for your lecturer...."
               required></textarea>
-	
+    <!-- Code for submit q button -->	
     <input type="submit" value="Submit Question" class="btn btn-info btn-large btn-block">
   </form>
 </template>
-
+<!-- Lists all Qs in the Database -->
 <template name="list">
   <table class="table table-striped">
     <tbody>
@@ -50,6 +50,7 @@
             <p class="text-success">{{body}}</p>
           </td>
 	  <td class="question-like">
+	  <!-- Code for the like icon for upvote input -->
 	    <input type="icon" class="icon-thumbs-up">
           </td>
 	  <td>    
