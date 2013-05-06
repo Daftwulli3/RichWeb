@@ -1,8 +1,11 @@
 Rich Web Assignment: Group
 
 Diarmuid Cahill - C09604529
-Mick Ashe - 
+Mick Ashe - C09530291
 
-Important files are RichWeb.js/RichWeb.html/RichWeb.css
+Instructions:
 
-*Ignore the files with ~ at the end.
+- Download and unzip Repository
+- CD to project folder location
+- type in command 'meteor' to deploy to localhost
+- got to https://localhost to view project
