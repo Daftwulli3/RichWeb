@@ -21,12 +21,13 @@ if (Meteor.isClient) {
       $('#remaining').html(MAX_CHARS - $('#question-body').val().length);
     }
   });
-/////////
+//gets selected Q and returns the seesion
  Template.list.selected = function () {
  return Session.equals("selected_question", this._id) ? "selected" : '';
  };
 ////////
-
+//increment a questions upvote by one upon button click
+//throws a pop up to confirm upvote
   Template.list.events({
     'click': function() { 
      Session.set("selected_question", this._id)
@@ -36,6 +37,7 @@ if (Meteor.isClient) {
   });
 
   //Template.list.questions = Questions.find({}, {sort: {created_at: -1}});
+  //sort questions by number of upvotes given
   Template.list.questions = Questions.find({}, {sort: {upvote: -1}});
 
 }
